@@ -124,7 +124,6 @@ def run_autograder():
             print("[FAIL] SYSTEM_PROMPT not defined or still has TODO template")
             sys.exit(1)
         keywords = ["draft_only", "5%", "dispatch_mobile_charger"]
-        keywords = ["draft_only", "5%", "dispatch_mobile_charger", "block_order", "dừng xe", "mã dtc"]
         matched_keys = [k for k in keywords if k in sys_prompt.lower() or k.replace("_", " ") in sys_prompt.lower()]
         if len(matched_keys) >= 2:
             print(f"[PASS] SYSTEM_PROMPT is valid. Matched: {matched_keys}")

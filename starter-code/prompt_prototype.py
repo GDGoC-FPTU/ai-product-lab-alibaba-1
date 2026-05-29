@@ -22,7 +22,11 @@ if sys.stdout.encoding != 'utf-8':
     except Exception:
         pass
 
-import google.generativeai as genai
+try:
+    import google.generativeai as genai
+except ImportError:
+    genai = None
+
 from typing import Any
 
 # Standard Model Identifier
@@ -67,6 +71,9 @@ def evaluate_prompt(user_input: str) -> str:
         Set GEMINI_API_KEY or GOOGLE_API_KEY in your environment.
         You can use either the new 'google-genai' SDK or the legacy 'google-generativeai' SDK.
     """
+    if genai is None:
+        return "[Error]: Thư viện google-generativeai chưa được cài đặt."
+
     api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
     try:
         if not api_key:
