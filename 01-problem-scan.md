@@ -1,6 +1,6 @@
 # 📄 Phase 1 — SCAN & Phase 2 — QUICK-ASSESS
 
-**Họ và tên:** Tạ Văn Huấn
+**Họ và tên:** Tạ Văn Huấn.
 **MSSV:** 2A202600984  
 **Lớp:** C401
 **Công ty:** Vin Smart Future (Vingroup)  
